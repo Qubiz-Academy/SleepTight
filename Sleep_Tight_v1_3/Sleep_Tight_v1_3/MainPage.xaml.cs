@@ -29,7 +29,7 @@ namespace Sleep_Tight_v1_3
         {
             Detail = new NavigationPage(new Settings());
             IsPresented = false;
-        }
+        } 
 
         private void Handle_Clicked_Information(object sender, EventArgs e)
         {
