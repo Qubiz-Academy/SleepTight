@@ -28,7 +28,7 @@ namespace Sleep_Tight_v1_3
         private void Handle_Clicked_Settings(object sender, EventArgs e)
         {
             Detail = new NavigationPage(new Settings());
-            IsPresented = false;
+            IsPresented = false;  
         } 
 
         private void Handle_Clicked_Information(object sender, EventArgs e)
