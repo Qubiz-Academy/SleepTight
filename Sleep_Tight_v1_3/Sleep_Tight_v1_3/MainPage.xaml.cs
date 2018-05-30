@@ -12,11 +12,11 @@ namespace Sleep_Tight_v1_3
     public partial class MainPage : MasterDetailPage
 	{
 		public MainPage()
-		{
+		{ 
 			InitializeComponent();
 
             Detail = new NavigationPage(new Start_Page());
-            IsPresented = false;
+            IsPresented = false;   
         }
 
         private void Handle_Clicked_Start_Page(object sender, EventArgs e)
