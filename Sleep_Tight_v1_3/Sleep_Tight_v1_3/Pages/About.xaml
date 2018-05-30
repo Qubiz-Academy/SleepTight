@@ -6,6 +6,7 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="About Us Page"></Label>
+            <Button />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
