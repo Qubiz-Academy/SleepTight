@@ -6,7 +6,7 @@
              MasterBehavior="Popover">
 
     <MasterDetailPage.Master>
-        <ContentPage Padding="10" BackgroundColor="Gray" Title="Master">
+        <ContentPage Padding="10" BackgroundColor="White" Title="Master">
             <ContentPage.Content>
                 <StackLayout Margin="5,30,5,5">
                     <Label Text="Sleep Tight v1.3"></Label>
@@ -31,5 +31,5 @@
             </ContentPage.Content>
         </ContentPage>
     </MasterDetailPage.Detail>
-
+    
 </MasterDetailPage>

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Sleep_Tight_v1_3.Helpers;
+using Sleep_Tight_v1_3.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,8 +16,16 @@ namespace Sleep_Tight_v1_3
 		public MainPage()
 		{ 
 			InitializeComponent();
+            if (LocalSettings.ShowGDPR == true)
+            {
+                Detail = new NavigationPage(new Start_Page());
+                Navigation.PushModalAsync(new GdprAccept());
 
-            Detail = new NavigationPage(new Start_Page());
+            }
+            else
+            {
+                Detail = new NavigationPage(new Start_Page());
+            }
             IsPresented = false;   
         }
 

@@ -1,7 +1,7 @@
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-
+using Sleep_Tight_v1_3.Helpers;
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace Sleep_Tight_v1_3
 {
@@ -11,13 +11,14 @@ namespace Sleep_Tight_v1_3
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new NavigationPage( new MainPage());
 		}
 
 		protected override void OnStart ()
 		{
-			// Handle when your app starts
-		}
+            // Handle when your app starts
+            
+        }
 
 		protected override void OnSleep ()
 		{

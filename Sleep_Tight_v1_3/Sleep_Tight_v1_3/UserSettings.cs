@@ -2,7 +2,7 @@
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
 
-namespace QbizApp.Helpers
+namespace Sleep_Tight_v1_3.Helpers
 {
     /// <summary>  
     /// This is the Settings static class that can be used in your Core solution or in any  
@@ -27,7 +27,7 @@ namespace QbizApp.Helpers
 
         public static bool ShowGDPR
         {
-            get => AppSettings.GetValueOrDefault(nameof(ShowGDPR), false);
+            get => AppSettings.GetValueOrDefault(nameof(ShowGDPR), true);
             set => AppSettings.AddOrUpdateValue(nameof(ShowGDPR), value);
         }
 
