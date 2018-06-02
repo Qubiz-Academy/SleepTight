@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sleep_Tight_v1_3.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,13 @@ namespace Sleep_Tight_v1_3
         public Start_Page ()
         {
             InitializeComponent();
+        }
+
+        
+
+        private void Button_Clicked_1(object sender, EventArgs e)
+        {
+            LocalSettings.ClearAllData();
         }
     }
 }

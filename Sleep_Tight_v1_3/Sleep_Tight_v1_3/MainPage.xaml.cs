@@ -1,5 +1,6 @@
 ﻿using Sleep_Tight_v1_3.Helpers;
 using Sleep_Tight_v1_3.Pages;
+using Sleep_Tight_v1_3.PropertiesPages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,17 +17,12 @@ namespace Sleep_Tight_v1_3
 		public MainPage()
 		{ 
 			InitializeComponent();
-            if (LocalSettings.ShowGDPR == true)
-            {
-                Detail = new NavigationPage(new Start_Page());
-                Navigation.PushModalAsync(new GdprAccept());
-
-            }
+            if(LocalSettings.ShowMainPage==2)
+                Detail = new NavigationPage( new Start_Page());//start_page pagina principala pt standart o sa facem altele pt custom si plyfazic si plm
             else
             {
-                Detail = new NavigationPage(new Start_Page());
+
             }
-            IsPresented = false;   
         }
 
         private void Handle_Clicked_Start_Page(object sender, EventArgs e)

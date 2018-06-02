@@ -30,13 +30,30 @@ namespace Sleep_Tight_v1_3.Helpers
             get => AppSettings.GetValueOrDefault(nameof(ShowGDPR), true);
             set => AppSettings.AddOrUpdateValue(nameof(ShowGDPR), value);
         }
-
-        public static string ShowLogin
+        //determina daca apare sau nu pagina de alegeri de tipuri de somn
+        public static bool ShowTypePage
         {
-            get => AppSettings.GetValueOrDefault(nameof(ShowLogin), string.Empty);
-            set => AppSettings.AddOrUpdateValue(nameof(ShowLogin), value);
+            get => AppSettings.GetValueOrDefault(nameof(ShowTypePage), true);
+            set => AppSettings.AddOrUpdateValue(nameof(ShowTypePage), value);
         }
-
+        public static int ShowMainPage
+        {
+            get => AppSettings.GetValueOrDefault(nameof(ShowMainPage), 0);
+            set => AppSettings.AddOrUpdateValue(nameof(ShowMainPage), value);
+        }
+        //determina care pagina principala apare la start
+        public static bool ShowStats
+        {
+            get => AppSettings.GetValueOrDefault(nameof(ShowStats), false);
+            set => AppSettings.AddOrUpdateValue(nameof(ShowStats), value);
+        }
+        //determina daca utilizatorul va vrea sau nu stats dimineata
+        public static bool UseGyro
+        {
+            get => AppSettings.GetValueOrDefault(nameof(UseGyro), false);
+            set => AppSettings.AddOrUpdateValue(nameof(UseGyro), value);
+        }
+        //etermina daca utilizatorul vrea sa ii fie inregistrate miscarile noapte 
         public static void ClearAllData()
         {
             AppSettings.Clear();

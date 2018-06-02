@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sleep_Tight_v1_3.PropertiesPages.TypeChoose1Time" BackgroundColor="#0e2263" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Margin="50,50,50,50" >
+            <Button x:Name="Custom" Text="Custom Mode" FontSize="20" FontAttributes="Bold" BackgroundColor="#edbb28" Clicked="Custom_Clicked" Margin="0,0,0,20"/>
+            <Button x:Name="Standard" Text="Standard Mode" FontSize="20" FontAttributes="Bold" BackgroundColor="#edbb28" Clicked="Standard_Clicked" Margin="0,0,0,20"/>
+            <Button x:Name="PolyFazic" Text="PolyMorphic" FontSize="20" FontAttributes="Bold" BackgroundColor="#edbb28" Clicked="PolyFazic_Clicked" Margin="0,0,0,20"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
