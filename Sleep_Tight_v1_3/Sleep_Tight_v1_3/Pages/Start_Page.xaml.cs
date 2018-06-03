@@ -24,5 +24,56 @@ namespace Sleep_Tight_v1_3
         {
             LocalSettings.ClearAllData();
         }
+        int val = 4;
+        private void ChMinute_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            if (ChHour.Value > 9 && ChMinute.Value > 9)
+            {
+                Time_Sleep.Text = Convert.ToInt32(ChHour.Value) + "." + Convert.ToInt32(ChMinute.Value);
+            }
+            else
+            if (ChHour.Value < 9 && ChMinute.Value < 9)
+            {
+                Time_Sleep.Text = "0" + Convert.ToInt32(ChHour.Value) + "." + "0" + Convert.ToInt32(ChMinute.Value);
+            }
+            if (ChMinute.Value > 9 && ChHour.Value < 10)
+            {
+                Time_Sleep.Text = "0" + Convert.ToInt32(ChHour.Value) + "." + Convert.ToInt32(ChMinute.Value);
+            }
+            else
+            {
+                if (ChMinute.Value < 10 && ChHour.Value > 9)
+                {
+                    Time_Sleep.Text = Convert.ToInt32(ChHour.Value) + "." + "0" + Convert.ToInt32(ChMinute.Value);
+                }
+            }
+            lemn.Text = Convert.ToInt32(ChHour.Value).ToString();
+        }
+
+        private void ChHour_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            
+            if (ChHour.Value > 9 && ChMinute.Value > 9)
+            {
+                Time_Sleep.Text = Convert.ToInt32(ChHour.Value) + "." + Convert.ToInt32(ChMinute.Value);
+            }
+            else
+            if(ChHour.Value < 9 && ChMinute.Value < 9)
+            {
+                Time_Sleep.Text ="0"+ Convert.ToInt32(ChHour.Value) + "." + "0" + Convert.ToInt32(ChMinute.Value);
+            }
+            if (ChMinute.Value > 9 && ChHour.Value < 10)
+            {
+                Time_Sleep.Text = "0" + Convert.ToInt32( ChHour.Value)+ "." + Convert.ToInt32(ChMinute.Value);
+            }
+            else
+            {
+                if (ChMinute.Value < 10 && ChHour.Value > 9)
+                {
+                    Time_Sleep.Text = Convert.ToInt32(ChHour.Value) + "." + "0" + Convert.ToInt32(ChMinute.Value);
+                }
+            }
+            plm.Text = Convert.ToInt32(ChHour.Value).ToString();
+        }
     }
 }
