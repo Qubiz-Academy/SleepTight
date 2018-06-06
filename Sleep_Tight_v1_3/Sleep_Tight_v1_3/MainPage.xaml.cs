@@ -15,14 +15,30 @@ namespace Sleep_Tight_v1_3
     public partial class MainPage : MasterDetailPage
 	{
 		public MainPage()
-		{ 
-			InitializeComponent();
-            if(LocalSettings.ShowMainPage==2)
-                Detail = new NavigationPage( new Start_Page());//start_page pagina principala pt standart o sa facem altele pt custom si plyfazic si plm
+		{
+            InitializeComponent();
+
+            if (LocalSettings.ShowGDPR == true)
+            {
+                Detail = new NavigationPage(new GdprAccept());
+            }
+            else
+                if (LocalSettings.ShowTypePage == true)
+            {
+                Detail = new NavigationPage(new TypeChoose1Time());
+            }
             else
             {
+                if (LocalSettings.ShowMainPage == 2)
+                    Detail = new NavigationPage(new Start_Page());
+                else
+                    if (LocalSettings.ShowMainPage==1)
+                        Detail = new NavigationPage(new Custom_Page());
 
             }
+
+            
+            IsPresented = false;
         }
 
         private void Handle_Clicked_Start_Page(object sender, EventArgs e)

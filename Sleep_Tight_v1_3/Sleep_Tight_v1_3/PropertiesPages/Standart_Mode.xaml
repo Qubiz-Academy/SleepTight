@@ -5,7 +5,7 @@
     <ScrollView BackgroundColor="#0e2263">
         <StackLayout>
             <Label Margin="0,0,0,0" TextColor="#f4db4e" FontSize="25" HorizontalTextAlignment="Center" FontFamily="Times New Roman"
-               >HELLO , we prodly present you our base better wake up mode!
+               >HELLO , we proudly present you our base better wake up mode!
             </Label>
             <Label Margin="0,0,0,0" TextColor="#f4db4e" FontSize="20" HorizontalTextAlignment="Start" 
                >Choosing this mode u will experience a good night time sleep and a fast and enjoyable wake up

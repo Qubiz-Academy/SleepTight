@@ -3,18 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Sleep_Tight_v1_3"
              x:Class="Sleep_Tight_v1_3.MainPage"
-             MasterBehavior="Default" >
+             MasterBehavior="Default" NavigationPage.HasNavigationBar="False" >
 
     <MasterDetailPage.Master>
-        <ContentPage Padding="10" BackgroundColor="#3b1e7f" Title="Master">
+        <ContentPage Padding="10" BackgroundColor="#0e2263" Title="Master">
             <ContentPage.Content>
-                <StackLayout Margin="5,30,5,5">
-                    <Label Text="Sleep Tight v1.3" TextColor="#f4db4e"></Label>
-                    <Button Text="Main" BackgroundColor="DarkBlue" TextColor="White" Clicked="Handle_Clicked_Start_Page"></Button>
-                    <Button Text="Settings" BackgroundColor="DarkBlue" TextColor="White" Clicked="Handle_Clicked_Settings"></Button>
-                    <Button Text="Information" BackgroundColor="DarkBlue" TextColor="White" Clicked="Handle_Clicked_Information"></Button>
-                    <Button Text="Tips" BackgroundColor="DarkBlue" TextColor="White" Clicked="Handle_Clicked_Tips"></Button>
-                    <Button Text="About Us" BackgroundColor="DarkBlue" TextColor="White" Clicked="Handle_Clicked_About"></Button>
+                <StackLayout Margin="5,30,5,5" VerticalOptions="Center">
+                    <Label Text="Sleep Tight v1.3" TextColor="#edbb28"></Label>
+                    <Button Text="Main" BackgroundColor="#edbb28" TextColor="White" Clicked="Handle_Clicked_Start_Page"></Button>
+                    <Button Text="Settings" BackgroundColor="#edbb28" TextColor="White" Clicked="Handle_Clicked_Settings"></Button>
+                    <Button Text="Information" BackgroundColor="#edbb28" TextColor="White" Clicked="Handle_Clicked_Information"></Button>
+                    <Button Text="Tips" BackgroundColor="#edbb28" TextColor="White" Clicked="Handle_Clicked_Tips"></Button>
+                    <Button Text="About Us" BackgroundColor="#edbb28" TextColor="White" Clicked="Handle_Clicked_About"></Button>
                 </StackLayout>
             </ContentPage.Content>
         </ContentPage>

@@ -58,7 +58,7 @@ namespace Sleep_Tight_v1_3.PropertiesPages
                 LocalSettings.UseGyro = false;
                 WantVibration.Text = "Yes";
                 WantVibration.BackgroundColor = Color.FromHex("#f4db4e");
-                AreStats.Text = "Vibration features are NOT available!";
+                useGyro.Text = "Vibration features are NOT available!";
             }
             if (val2 == 6)
             {
@@ -68,7 +68,7 @@ namespace Sleep_Tight_v1_3.PropertiesPages
 
         private void ContinueToMainPage_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new MainPage());
+            Navigation.PushModalAsync(new MainPage());
             
             LocalSettings.ShowMainPage = 2;//Pagina 2 din catalog adica MainPage in cazul asta
             LocalSettings.ShowTypePage = false;//nu mai apare type page-ul daca e pe false

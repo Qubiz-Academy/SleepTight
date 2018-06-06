@@ -19,18 +19,23 @@ namespace Sleep_Tight_v1_3.Pages
 			InitializeComponent ();
 		}
 
-        private async Task Button_ClickedAsync(object sender, EventArgs e)
+        private void Button_Clicked(object sender, EventArgs e)
         {
-            LocalSettings.ShowGDPR = false ;
-            await Navigation.PopModalAsync();
-            
-            if (LocalSettings.ShowTypePage == false)
+            if (LocalSettings.ShowTypePage == true)
             {
-               
-                await Navigation.PushModalAsync(new TypeChoose1Time());
-                Navigation.RemovePage(new GdprAccept());
+
+                Navigation.PushModalAsync(new TypeChoose1Time());
+                
             }
-            Navigation.RemovePage(new GdprAccept());
+            else
+            {
+                Navigation.PushModalAsync(new MainPage());
+            }
+            LocalSettings.ShowGDPR = false;
+            
+
+            
+
         }
     }
 }

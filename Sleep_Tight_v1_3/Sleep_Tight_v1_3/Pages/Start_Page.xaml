@@ -2,19 +2,36 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sleep_Tight_v1_3.Start_Page"
-            Title="Sleep Tight v1.3" NavigationPage.HasNavigationBar="False">
+            Title="Sleep Tight v1.3" NavigationPage.HasNavigationBar="False" BarBackgroundColor="#edbb28">
   <!--Pages can be added as references or inline-->
-    <ContentPage Title="Main" >
+    <ContentPage Title="Main" BackgroundColor="#0e2263">
+        <ScrollView>
         <StackLayout >
-        <Entry x:Name="Time_Sleep" Text="00.00" Keyboard="Numeric" />
-            <Label x:Name="plm"/>
-            <Slider x:Name="ChHour" Maximum="23" Minimum="0"  AutomationId="1" ValueChanged="ChHour_ValueChanged" Value="0" />
-            <Label x:Name="lemn"/>
-            <Slider x:Name="ChMinute" Maximum="59" Minimum="0" AutomationId="1" ValueChanged="ChMinute_ValueChanged" Value="0" />
+            
+            <Label x:Name="MinuteVal" TextColor="#edbb28"/>
+            <Entry Margin="50,0,50,0" x:Name="Time_Sleep" Text="00.00" Keyboard="Numeric" PlaceholderColor="#edbb28" TextColor="#edbb28"/>
+            <Label x:Name="plm" TextColor="#edbb28"/>
+            <Slider Margin="50,0,50,0" BackgroundColor="#edbb28" x:Name="ChHour" Maximum="23" Minimum="0"  AutomationId="1" ValueChanged="ChHour_ValueChanged" Value="0" />
+            <Label x:Name="lemn" TextColor="#edbb28"/>
+            <Slider Margin="50,0,50,0" BackgroundColor="#edbb28" x:Name="ChMinute" Maximum="59" Minimum="0" AutomationId="1" ValueChanged="ChMinute_ValueChanged" Value="0" />
+            <Button x:Name="CurentTime" Margin="50,50,50,50" BackgroundColor="#edbb28" Text="Pick Current Time" Clicked="CurentTime_Clicked"/>
+            
+            <Label x:Name="MinuteValWake" TextColor="#edbb28" />
+            <Entry  Margin="50,0,50,0" x:Name="Time_Wake" Text="00.00" Keyboard="Numeric" PlaceholderColor="#edbb28" TextColor="#edbb28"/>
+            <Label x:Name="plmWake" TextColor="#edbb28"/>
+            <Slider Margin="50,0,50,0" BackgroundColor="#edbb28" x:Name="ChHourWake" Maximum="23" Minimum="0"  AutomationId="1" ValueChanged="ChHourWake_ValueChanged" Value="0" />
+            <Label x:Name="lemnWake" TextColor="#edbb28"/>
+            <Slider Margin="50,0,50,0" BackgroundColor="#edbb28" x:Name="ChMinuteWake" Maximum="59" Minimum="0" AutomationId="1" ValueChanged="ChMinuteWake_ValueChanged" Value="0" />
+            <Button x:Name="timeSlept" Margin="50,50,50,50" BackgroundColor="#edbb28" Text="Calculate" Clicked="timeSlept_Clicked"/>
+                <Label x:Name="timer" TextColor="#edbb28"/>
+                <Label x:Name="timeSleptVal" TextColor="#edbb28"/>
+
+            
         </StackLayout>
+        </ScrollView>
 
     </ContentPage>
-    <ContentPage Title="Stats" >
+    <ContentPage Title="Stats" BackgroundColor="#0e2263" >
         
     </ContentPage>
 </TabbedPage>

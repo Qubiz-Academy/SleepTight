@@ -14,20 +14,7 @@ namespace Sleep_Tight_v1_3
 		{
 			InitializeComponent();
 
-            if (LocalSettings.ShowGDPR == true)
-            {
-                MainPage = new NavigationPage(new GdprAccept());
-            }
-            else
-                if (LocalSettings.ShowTypePage == true)
-                {
-                    MainPage = new NavigationPage(new TypeChoose1Time());
-                }
-                else
-                {
-                    MainPage = new MainPage();
-                
-                }
+            MainPage = new NavigationPage(new MainPage());
 
            
             

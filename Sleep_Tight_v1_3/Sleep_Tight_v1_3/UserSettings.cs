@@ -38,7 +38,7 @@ namespace Sleep_Tight_v1_3.Helpers
         }
         public static int ShowMainPage
         {
-            get => AppSettings.GetValueOrDefault(nameof(ShowMainPage), 0);
+            get => AppSettings.GetValueOrDefault(nameof(ShowMainPage), 2);
             set => AppSettings.AddOrUpdateValue(nameof(ShowMainPage), value);
         }
         //determina care pagina principala apare la start

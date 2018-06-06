@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Sleep_Tight_v1_3.Settings"
-             Title="Settings">
+             x:Class="Sleep_Tight_v1_3.Settings" NavigationPage.HasNavigationBar="False"
+             Title="Settings" BackgroundColor="#0e2263">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Settings Page"></Label>
+        <StackLayout VerticalOptions="Center">
+            <Button x:Name="ClearData" Margin="50,0,50,0" BackgroundColor="#edbb28" VerticalOptions="CenterAndExpand" 
+                    Text="Clear All Data" FontSize="20" Clicked="ClearData_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

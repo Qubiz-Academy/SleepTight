@@ -29,7 +29,8 @@ namespace Sleep_Tight_v1_3.PropertiesPages
 
         private void Standard_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Standart_Mode());
+            Navigation.PushModalAsync(new Standart_Mode());
+            
         }
     }
 }
