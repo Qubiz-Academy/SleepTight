@@ -3,10 +3,12 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sleep_Tight_v1_3.Pages.ColourSet" Style="{DynamicResource backgroundStyle}">
     <ContentPage.Content>
-        <StackLayout VerticalOptions="Center">
+        <StackLayout VerticalOptions="Center" >
             <Button Margin="50,5,50,5" x:Name="pickerBlue"  Text="Blue/LightBlue Font" Clicked="pickerBlue_Clicked" Style="{DynamicResource backgroundButtonStyle}"/>
             <Button Margin="50,5,50,5" x:Name="pickerBlack" Text="Dark/White Font" Clicked="pickerBlack_Clicked" Style="{DynamicResource backgroundButtonStyle}"/>
-            <Button Margin="50,5,50,5" x:Name="pickerDarkViolet" Text="" Clicked="pickerDarkViolet_Clicked" Style="{DynamicResource backgroundButtonStyle}"/>
+            <Button Margin="50,5,50,5" x:Name="pickerDarkViolet" Text="DarkTile/WhiteTile" Clicked="pickerDarkTile_Clicked" Style="{DynamicResource backgroundButtonStyle}"/>
+            <Button VerticalOptions="EndAndExpand" HorizontalOptions="EndAndExpand" Text="Back" FontSize="15" Style="{DynamicResource backgroundButtonStyle}" FontAttributes="Bold" Margin="0,50,0,0"/>
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

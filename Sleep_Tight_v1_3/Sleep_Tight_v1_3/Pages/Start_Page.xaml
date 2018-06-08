@@ -7,27 +7,9 @@
     <ContentPage Title="Main"  >
         <ScrollView>
         <StackLayout >
-
-                <Label Style="{DynamicResource labelStyle}" x:Name="MinuteVal" />
-                <Entry Style="{DynamicResource backgroundEntryStyle}" Margin="50,0,50,0" x:Name="Time_Sleep" Text="00.00" Keyboard="Numeric"  />
-                <Label Style="{DynamicResource labelStyle}" x:Name="plm" />
-                <Slider Style="{DynamicResource backgroundSliderStyle}" Margin="50,0,50,0"  x:Name="ChHour" Maximum="23" Minimum="0"  AutomationId="1" ValueChanged="ChHour_ValueChanged" Value="0" />
-            <Label x:Name="lemn" Style="{DynamicResource labelStyle}"/>
-            <Slider Margin="50,0,50,0" Style="{DynamicResource backgroundSliderStyle}" x:Name="ChMinute" Maximum="59" Minimum="0" AutomationId="1" ValueChanged="ChMinute_ValueChanged" Value="0" />
-                <Button x:Name="CurentTime" Margin="50,50,50,50" Style="{DynamicResource backgroundButtonStyle}" Text="Pick Current Time" Clicked="CurentTime_Clicked"/>
-
-                <Label x:Name="MinuteValWake" Style="{DynamicResource labelStyle}" />
-                <Entry  Margin="50,0,50,0" x:Name="Time_Wake" Text="00.00" Keyboard="Numeric" Style="{DynamicResource backgroundEntryStyle}"/>
-                <Label x:Name="plmWake" Style="{DynamicResource labelStyle}"/>
-                <Slider Style="{DynamicResource backgroundSliderStyle}" Margin="50,0,50,0"  x:Name="ChHourWake" Maximum="23" Minimum="0"  AutomationId="1" ValueChanged="ChHourWake_ValueChanged" Value="0" />
-                <Label x:Name="lemnWake" Style="{DynamicResource labelStyle}"/>
-                <Slider Margin="50,0,50,0" Style="{DynamicResource backgroundSliderStyle}" x:Name="ChMinuteWake" Maximum="59" Minimum="0" AutomationId="1" ValueChanged="ChMinuteWake_ValueChanged" Value="0" />
-                <Button x:Name="timeSlept" Margin="50,50,50,50" Style="{DynamicResource backgroundButtonStyle}" Text="Calculate" Clicked="timeSlept_Clicked"/>
-                <Label x:Name="timer" Style="{DynamicResource labelStyle}"/>
-                <Label x:Name="timeSleptVal" Style="{DynamicResource labelStyle}"/>
-
-            
-        </StackLayout>
+                <TimePicker x:Name="TimePickerGoSleep" Margin="50,0,50,0" Style="{DynamicResource backgroundTimePickerStyle}" PropertyChanged="TimePickerGoSleep_PropertyChanged" VerticalOptions="Center" HeightRequest="100"/>
+                <Label x:Name="test" Style="{DynamicResource labelStyle}"/>
+            </StackLayout>
         </ScrollView>
 
     </ContentPage>

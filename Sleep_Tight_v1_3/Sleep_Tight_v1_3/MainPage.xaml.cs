@@ -34,6 +34,7 @@ namespace Sleep_Tight_v1_3
                 else
                     if (LocalSettings.ShowMainPage==1)
                         Detail = new NavigationPage(new Custom_Page());
+               
 
             }
 
@@ -49,25 +50,26 @@ namespace Sleep_Tight_v1_3
 
         private void Handle_Clicked_Settings(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new Settings());
+            //Detail = new NavigationPage(new Settings());
+            Detail.Navigation.PushAsync(new Settings());
             IsPresented = false;  //Ek
         } 
 
         private void Handle_Clicked_Information(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new Information());
+            Detail.Navigation.PushAsync(new Information());
             IsPresented = false;
         }
 
         private void Handle_Clicked_Tips(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new Tips());
+            Detail.Navigation.PushAsync(new Tips());
             IsPresented = false;
         }
 
         private void Handle_Clicked_About(object sender, EventArgs e)
         {
-            Detail = new NavigationPage(new About());
+            Detail.Navigation.PushAsync(new About());
             IsPresented = false;
         }
     }

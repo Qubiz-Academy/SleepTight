@@ -20,26 +20,7 @@ namespace Sleep_Tight_v1_3.PropertiesPages
         int val2 = 0;
         private void WantStatsYes_Clicked(object sender, EventArgs e)
         {
-            if (val1 % 2 == 0)
-            {
-                WantStatsYes.BackgroundColor = Color.FromRgb(247, 108, 2);
-                LocalSettings.ShowStats = true;
-                WantStatsYes.Text = "No";
-                val1++;
-                AreStats.Text = "Stats are Active!";
-            }
-            else
-            {
-                val1++;
-                LocalSettings.ShowStats = false;
-                WantStatsYes.Text = "Yes";
-                WantStatsYes.BackgroundColor = Color.FromHex("#f4db4e");
-                AreStats.Text = "Stats are NOT active!";
-            }
-            if(val1==6)
-            {
-                AreStats.Text = "Please decide is not that hard!";
-            }
+            
         }
 
         private void WantVibration_Clicked(object sender, EventArgs e)
@@ -68,10 +49,16 @@ namespace Sleep_Tight_v1_3.PropertiesPages
 
         private void ContinueToMainPage_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new MainPage());
-            
             LocalSettings.ShowMainPage = 2;//Pagina 2 din catalog adica MainPage in cazul asta
             LocalSettings.ShowTypePage = false;//nu mai apare type page-ul daca e pe false
+            Navigation.PushModalAsync(new MainPage());
+            
+            
+        }
+
+        private void SwitchCell_OnChanged(object sender, ToggledEventArgs e)
+        {
+
         }
     }
 }
