@@ -18,10 +18,11 @@ namespace Sleep_Tight_v1_3
             InitializeComponent();
         }
 
-        
+        int TotalTimeSlept = 0;
+        int timeSleep;
+        int timeWake;
+        int mint;
 
-        
-        
         private void ChMinute_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             if (ChHour.Value > 9 && ChMinute.Value > 9)
@@ -126,10 +127,6 @@ namespace Sleep_Tight_v1_3
             plmWake.Text = Convert.ToInt32(ChHourWake.Value).ToString();
             MinuteValWake.Text = Convert.ToInt32(Convert.ToInt32(ChHourWake.Value) * 60 + Convert.ToInt32(ChMinuteWake.Value)).ToString();
         }
-        int TotalTimeSlept = 0;
-        int timeSleep;
-        int timeWake;
-        int mint;
         
         private void timeSlept_Clicked(object sender, EventArgs e)
         {
@@ -145,7 +142,6 @@ namespace Sleep_Tight_v1_3
 
                  if (stop == TotalTimeSlept * 60)
                  {
-
                      return false;
                  }
                  else

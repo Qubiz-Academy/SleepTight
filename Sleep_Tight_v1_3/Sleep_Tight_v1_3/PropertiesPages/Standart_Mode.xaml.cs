@@ -68,10 +68,9 @@ namespace Sleep_Tight_v1_3.PropertiesPages
 
         private void ContinueToMainPage_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new MainPage());
-            
             LocalSettings.ShowMainPage = 2;//Pagina 2 din catalog adica MainPage in cazul asta
             LocalSettings.ShowTypePage = false;//nu mai apare type page-ul daca e pe false
+            Navigation.PushModalAsync(new MainPage());
         }
     }
 }
