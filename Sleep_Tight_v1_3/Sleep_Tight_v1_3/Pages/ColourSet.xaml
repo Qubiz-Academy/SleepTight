@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sleep_Tight_v1_3.Pages.ColourSet" Style="{DynamicResource backgroundStyle}">
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center">
+            <Button Margin="50,5,50,5" x:Name="pickerBlue"  Text="Blue/LightBlue Font" Clicked="pickerBlue_Clicked" Style="{DynamicResource backgroundButtonStyle}"/>
+            <Button Margin="50,5,50,5" x:Name="pickerBlack" Text="Dark/White Font" Clicked="pickerBlack_Clicked" Style="{DynamicResource backgroundButtonStyle}"/>
+            <Button Margin="50,5,50,5" x:Name="pickerDarkViolet" Text="" Clicked="pickerDarkViolet_Clicked" Style="{DynamicResource backgroundButtonStyle}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

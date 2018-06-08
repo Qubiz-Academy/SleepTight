@@ -12,7 +12,8 @@ namespace Sleep_Tight_v1_3
 	{
 		public App ()
 		{
-			InitializeComponent();
+            
+            InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
 
@@ -23,7 +24,9 @@ namespace Sleep_Tight_v1_3
 		protected override void OnStart ()
 		{
             // Handle when your app starts
-            
+            App.Current.Resources["backgroundColor"] = Color.FromHex(LocalSettings.FontColorBack);
+            App.Current.Resources["textColor"] = Color.FromHex(LocalSettings.FontColorText);
+            App.Current.Resources["buttonBackColor"] = Color.FromHex(LocalSettings.FontButtonBack);
         }
 
 		protected override void OnSleep ()

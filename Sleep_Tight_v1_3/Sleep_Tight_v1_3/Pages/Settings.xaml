@@ -2,11 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sleep_Tight_v1_3.Settings" NavigationPage.HasNavigationBar="False"
-             Title="Settings" BackgroundColor="#0e2263">
+             Title="Settings" Style="{DynamicResource backgroundStyle}">
     <ContentPage.Content>
         <StackLayout VerticalOptions="Center">
-            <Button x:Name="ClearData" Margin="50,0,50,0" BackgroundColor="#edbb28" VerticalOptions="CenterAndExpand" 
-                    Text="Clear All Data" FontSize="20" Clicked="ClearData_Clicked"/>
+            <Button x:Name="ClearData" Margin="50,0,50,0" Style="{DynamicResource backgroundButtonStyle}" VerticalOptions="CenterAndExpand" 
+                    Text="Clear All Data" FontSize="15" Clicked="ClearData_Clicked"/>
+            <Button x:Name="ChangeColourSet" Text="Change Colour Set" Margin="50,0,50,0" Clicked="ChangeColourSet_Clicked" Style="{DynamicResource backgroundButtonStyle}"
+                    FontSize="15"/>
         </StackLayout>
     </ContentPage.Content>
-</ContentPage>
+</ContentPage> 

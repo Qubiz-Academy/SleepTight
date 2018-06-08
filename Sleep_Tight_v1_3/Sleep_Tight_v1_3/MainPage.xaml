@@ -6,15 +6,15 @@
              MasterBehavior="Default" NavigationPage.HasNavigationBar="False" >
 
     <MasterDetailPage.Master>
-        <ContentPage Padding="10" BackgroundColor="#0e2263" Title="Master">
+        <ContentPage Padding="10" Style="{DynamicResource backgroundStyle}" Title="Master">
             <ContentPage.Content>
                 <StackLayout Margin="5,30,5,5" VerticalOptions="Center">
-                    <Label Text="Sleep Tight v1.3" TextColor="#edbb28"></Label>
-                    <Button Text="Main" BackgroundColor="#edbb28" TextColor="White" Clicked="Handle_Clicked_Start_Page"></Button>
-                    <Button Text="Settings" BackgroundColor="#edbb28" TextColor="White" Clicked="Handle_Clicked_Settings"></Button>
-                    <Button Text="Information" BackgroundColor="#edbb28" TextColor="White" Clicked="Handle_Clicked_Information"></Button>
-                    <Button Text="Tips" BackgroundColor="#edbb28" TextColor="White" Clicked="Handle_Clicked_Tips"></Button>
-                    <Button Text="About Us" BackgroundColor="#edbb28" TextColor="White" Clicked="Handle_Clicked_About"></Button>
+                    <Label Text="Sleep Tight v1.3" Style="{DynamicResource labelStyle}"></Label>
+                    <Button Text="Main" Style="{DynamicResource backgroundButtonStyle}" Clicked="Handle_Clicked_Start_Page"></Button>
+                    <Button Text="Settings" Style="{DynamicResource backgroundButtonStyle}" Clicked="Handle_Clicked_Settings"></Button>
+                    <Button Text="Information" Style="{DynamicResource backgroundButtonStyle}" Clicked="Handle_Clicked_Information"></Button>
+                    <Button Text="Tips" Style="{DynamicResource backgroundButtonStyle}" Clicked="Handle_Clicked_Tips"></Button>
+                    <Button Text="About Us" Style="{DynamicResource backgroundButtonStyle}" Clicked="Handle_Clicked_About"></Button>
                 </StackLayout>
             </ContentPage.Content>
         </ContentPage>

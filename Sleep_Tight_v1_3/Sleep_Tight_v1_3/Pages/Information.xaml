@@ -2,10 +2,10 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sleep_Tight_v1_3.Information"
-             Title="Information">
+             Title="Information" NavigationPage.HasNavigationBar="False" Style="{DynamicResource backgroundStyle}">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Information Page"></Label>
+            <Label Text="Information Page" Style="{DynamicResource labelStyle}"></Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

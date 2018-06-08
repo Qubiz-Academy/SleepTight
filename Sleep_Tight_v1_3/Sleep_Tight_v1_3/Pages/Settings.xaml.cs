@@ -1,4 +1,5 @@
 ﻿using Sleep_Tight_v1_3.Helpers;
+using Sleep_Tight_v1_3.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,6 +23,11 @@ namespace Sleep_Tight_v1_3
         {
             LocalSettings.ClearAllData();
             
+        }
+
+        private void ChangeColourSet_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new ColourSet());
         }
     }
 }

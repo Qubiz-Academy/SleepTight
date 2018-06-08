@@ -19,11 +19,30 @@ namespace Sleep_Tight_v1_3.Helpers
             }
         }
 
-        public static string Setting1
+
+        //Specific fontcolors
+        public static string FontColorBack
         {
-            get => AppSettings.GetValueOrDefault(nameof(Setting1), string.Empty);
-            set => AppSettings.AddOrUpdateValue(nameof(Setting1), value);
+            get => AppSettings.GetValueOrDefault(nameof(FontColorBack), "#042044");
+            set => AppSettings.AddOrUpdateValue(nameof(FontColorBack), value);
         }
+        public static string FontColorText
+        {
+            get => AppSettings.GetValueOrDefault(nameof(FontColorText), "#cee3ff");
+            set => AppSettings.AddOrUpdateValue(nameof(FontColorText), value);
+        }
+        public static string FontButtonBack
+        {
+            get => AppSettings.GetValueOrDefault(nameof(FontButtonBack), "#164b8e");
+            set => AppSettings.AddOrUpdateValue(nameof(FontButtonBack), value);
+        }
+        public static string FontTextButton
+        {
+            get => AppSettings.GetValueOrDefault(nameof(FontTextButton), "#cee3ff");
+            set => AppSettings.AddOrUpdateValue(nameof(FontTextButton), value);
+        }
+        //
+
 
         public static bool ShowGDPR
         {

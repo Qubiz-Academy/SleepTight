@@ -2,34 +2,34 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sleep_Tight_v1_3.PropertiesPages.Standart_Mode" NavigationPage.HasNavigationBar="False">
-    <ScrollView BackgroundColor="#0e2263">
+    <ScrollView Style="{DynamicResource backgroundStyle}">
         <StackLayout>
-            <Label Margin="0,0,0,0" TextColor="#f4db4e" FontSize="25" HorizontalTextAlignment="Center" FontFamily="Times New Roman"
+            <Label Margin="0,0,0,0" Style="{DynamicResource labelStyle}" FontSize="25" HorizontalTextAlignment="Center" FontFamily="Times New Roman"
                >HELLO , we proudly present you our base better wake up mode!
             </Label>
-            <Label Margin="0,0,0,0" TextColor="#f4db4e" FontSize="20" HorizontalTextAlignment="Start" 
+            <Label Margin="0,0,0,0" Style="{DynamicResource labelStyle}" FontSize="20" HorizontalTextAlignment="Start" 
                >Choosing this mode u will experience a good night time sleep and a fast and enjoyable wake up
             </Label>
 
-            <Label TextColor="#f4db4e" FontSize="20" HorizontalTextAlignment="Start" 
+            <Label Style="{DynamicResource labelStyle}" FontSize="20" HorizontalTextAlignment="Start" 
                >But first please let us know if u want stats!
             </Label>
-            <Button x:Name="WantStatsYes"  HeightRequest="40" Margin="100,0,100,0" WidthRequest="80" FlowDirection="LeftToRight" BackgroundColor="#f4db4e" Text="Yes" Clicked="WantStatsYes_Clicked"/>
-            <Label x:Name="AreStats" HorizontalOptions="CenterAndExpand" Text="Stats are NOT active!" TextColor="White"/>
-            <Label TextColor="#f4db4e" FontSize="20" HorizontalTextAlignment="Start" 
+            <Button x:Name="WantStatsYes"  HeightRequest="40" Margin="100,0,100,0" WidthRequest="80" FlowDirection="LeftToRight" Style="{DynamicResource backgroundButtonStyle}" Text="Yes" Clicked="WantStatsYes_Clicked"/>
+            <Label x:Name="AreStats" HorizontalOptions="CenterAndExpand" Text="Stats are NOT active!" Style="{DynamicResource labelStyle}"/>
+            <Label Style="{DynamicResource labelStyle}" FontSize="20" HorizontalTextAlignment="Start" 
                >These stats show ur overall sleep quality and other things
             </Label>
-            <Label TextColor="#f4db4e" FontSize="20" HorizontalTextAlignment="Start" 
+            <Label Style="{DynamicResource labelStyle}" FontSize="20" HorizontalTextAlignment="Start" 
                >Also we can determine when u fall asleep based on vibrations would u like that ?
             </Label>
-            <Button x:Name="WantVibration"  HeightRequest="40" Margin="100,0,100,0" WidthRequest="80" FlowDirection="LeftToRight" BackgroundColor="#f4db4e" Text="Yes" Clicked="WantVibration_Clicked"/>
-            <Label x:Name="useGyro" HorizontalOptions="CenterAndExpand" Text="Vibration features are not available!" TextColor="White"/>
+            <Button x:Name="WantVibration"  HeightRequest="40" Margin="100,0,100,0" WidthRequest="80" FlowDirection="LeftToRight" Style="{DynamicResource backgroundButtonStyle}" Text="Yes" Clicked="WantVibration_Clicked"/>
+            <Label x:Name="useGyro" HorizontalOptions="CenterAndExpand" Text="Vibration features are not available!" Style="{DynamicResource labelStyle}"/>
             
             <!--Ce mai trebe adaugati aici -->
 
 
 
-            <Button Text="Continue" x:Name="ContinueToMainPage" HeightRequest="40" Margin="100,0,100,0" WidthRequest="80" FlowDirection="LeftToRight" BackgroundColor="#f4db4e" Clicked="ContinueToMainPage_Clicked"/>
+            <Button Text="Continue" x:Name="ContinueToMainPage" HeightRequest="40" Margin="100,0,100,0" WidthRequest="80" FlowDirection="LeftToRight" Style="{DynamicResource backgroundButtonStyle}" Clicked="ContinueToMainPage_Clicked"/>
         </StackLayout>
     </ScrollView>
 </ContentPage>
