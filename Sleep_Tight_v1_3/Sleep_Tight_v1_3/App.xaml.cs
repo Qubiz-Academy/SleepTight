@@ -27,6 +27,7 @@ namespace Sleep_Tight_v1_3
             App.Current.Resources["backgroundColor"] = Color.FromHex(LocalSettings.FontColorBack);
             App.Current.Resources["textColor"] = Color.FromHex(LocalSettings.FontColorText);
             App.Current.Resources["buttonBackColor"] = Color.FromHex(LocalSettings.FontButtonBack);
+            App.Current.Resources["textButtonColor"] = Color.FromHex(LocalSettings.FontTextButton);
         }
 
 		protected override void OnSleep ()

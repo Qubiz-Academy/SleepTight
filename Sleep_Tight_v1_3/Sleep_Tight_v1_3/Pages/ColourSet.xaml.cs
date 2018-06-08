@@ -28,7 +28,7 @@ namespace Sleep_Tight_v1_3.Pages
             App.Current.Resources["backgroundColor"] = Color.FromHex(LocalSettings.FontColorBack);
             App.Current.Resources["textColor"] = Color.FromHex(LocalSettings.FontColorText);
             App.Current.Resources["buttonBackColor"] = Color.FromHex(LocalSettings.FontButtonBack);
-            
+            App.Current.Resources["textButtonColor"] = Color.FromHex(LocalSettings.FontTextButton);
         }
 
         private void pickerBlack_Clicked(object sender, EventArgs e)
@@ -41,18 +41,20 @@ namespace Sleep_Tight_v1_3.Pages
             App.Current.Resources["backgroundColor"] = Color.FromHex(LocalSettings.FontColorBack);
             App.Current.Resources["textColor"] = Color.FromHex(LocalSettings.FontColorText);
             App.Current.Resources["buttonBackColor"] = Color.FromHex(LocalSettings.FontButtonBack);
+            App.Current.Resources["textButtonColor"] = Color.FromHex(LocalSettings.FontTextButton);
         }
 
-        private void pickerDarkViolet_Clicked(object sender, EventArgs e)
+        private void pickerDarkTile_Clicked(object sender, EventArgs e)
         {
             LocalSettings.FontButtonBack = "#036772";
             LocalSettings.FontColorBack = "#073544";
-            LocalSettings.FontColorText = "#0d1314";
-            LocalSettings.FontTextButton = "#0d1314";
+            LocalSettings.FontColorText = "#c1ffef";
+            LocalSettings.FontTextButton = "#c1ffef";
 
             App.Current.Resources["backgroundColor"] = Color.FromHex(LocalSettings.FontColorBack);
             App.Current.Resources["textColor"] = Color.FromHex(LocalSettings.FontColorText);
             App.Current.Resources["buttonBackColor"] = Color.FromHex(LocalSettings.FontButtonBack);
+            App.Current.Resources["textButtonColor"] = Color.FromHex(LocalSettings.FontTextButton);
         }
 
     }

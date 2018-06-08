@@ -7,14 +7,22 @@
             <Label Margin="0,0,0,0" Style="{DynamicResource labelStyle}" FontSize="25" HorizontalTextAlignment="Center" FontFamily="Times New Roman"
                >HELLO , we proudly present you our base better wake up mode!
             </Label>
-            <Label Margin="0,0,0,0" Style="{DynamicResource labelStyle}" FontSize="20" HorizontalTextAlignment="Start" 
+            <Label Margin="0,0,0,0" Style="{DynamicResource labelStyle}" FontSize="15" HorizontalTextAlignment="Start" 
                >Choosing this mode u will experience a good night time sleep and a fast and enjoyable wake up
             </Label>
 
-            <Label Style="{DynamicResource labelStyle}" FontSize="20" HorizontalTextAlignment="Start" 
+            <Label Style="{DynamicResource labelStyle}" FontSize="15" HorizontalTextAlignment="Start" 
                >But first please let us know if u want stats!
             </Label>
-            <Button x:Name="WantStatsYes"  HeightRequest="40" Margin="100,0,100,0" WidthRequest="80" FlowDirection="LeftToRight" Style="{DynamicResource backgroundButtonStyle}" Text="Yes" Clicked="WantStatsYes_Clicked"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Enable Stats" />
+                <Switch />
+
+            </Grid>
             <Label x:Name="AreStats" HorizontalOptions="CenterAndExpand" Text="Stats are NOT active!" Style="{DynamicResource labelStyle}"/>
             <Label Style="{DynamicResource labelStyle}" FontSize="20" HorizontalTextAlignment="Start" 
                >These stats show ur overall sleep quality and other things
