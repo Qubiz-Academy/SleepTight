@@ -15,12 +15,30 @@ namespace Sleep_Tight_v1_3
     {
         public Start_Page ()
         {
+            
             InitializeComponent();
+            test.Text = "Current Start Time is " + LocalSettings.lastTimeSet.ToString();
         }
-
+        
         private void TimePickerGoSleep_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
         {
-            test.Text = TimePickerGoSleep.Time.Hours.ToString();
+            
+            
+        }
+        int minutes_slept = 0;
+        
+        private void PickCurrentTime_Clicked(object sender, EventArgs e)
+        {
+            DateTime now = DateTime.Now.ToLocalTime();
+            TimePickerGoSleep.Time = now.TimeOfDay;
+            LocalSettings.lastTimeSet = TimePickerGoSleep.Time.ToString();
+            test.Text = "Current Start Time is " + LocalSettings.lastTimeSet.ToString();
+        }
+
+        private void saveSetTime_Clicked(object sender, EventArgs e)
+        {
+            LocalSettings.lastTimeSet = TimePickerGoSleep.Time.ToString();
+            test.IsVisible = false;
         }
     }
 }

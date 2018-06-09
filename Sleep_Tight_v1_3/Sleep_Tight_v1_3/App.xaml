@@ -9,6 +9,7 @@
             <Color x:Key="buttonBackColor"></Color>
             <Color x:Key="textButtonColor"></Color>
             
+            
             <Style x:Key="labelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource textColor}" />
             </Style>
@@ -38,8 +39,9 @@
                 
             </Style>
             <Style x:Key="backgroundTimePickerStyle" TargetType="TimePicker">
-                <Setter Property="BackgroundColor" Value="{DynamicResource buttonBackColor}" />
-                <Setter Property="TextColor" Value="{DynamicResource textButtonColor}"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource backgroundColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource  textColor}"/>
+                
             </Style>
         </ResourceDictionary>
     </Application.Resources>

@@ -1,6 +1,8 @@
 ﻿// Helpers/Settings.cs  
 using Plugin.Settings;
 using Plugin.Settings.Abstractions;
+using Plugin.Settings.Abstractions.Extensions;
+using System;
 
 namespace Sleep_Tight_v1_3.Helpers
 {
@@ -73,6 +75,11 @@ namespace Sleep_Tight_v1_3.Helpers
             set => AppSettings.AddOrUpdateValue(nameof(UseGyro), value);
         }
         //etermina daca utilizatorul vrea sa ii fie inregistrate miscarile noapte 
+        public static string lastTimeSet
+        {
+            get => AppSettings.GetValueOrDefault(nameof(lastTimeSet), "");
+            set => AppSettings.AddOrUpdateValue(nameof(lastTimeSet), value);
+        }
         public static void ClearAllData()
         {
             AppSettings.Clear();

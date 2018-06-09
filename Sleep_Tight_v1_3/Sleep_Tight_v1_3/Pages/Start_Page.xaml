@@ -7,8 +7,21 @@
     <ContentPage Title="Main"  >
         <ScrollView>
         <StackLayout >
-                <TimePicker x:Name="TimePickerGoSleep" Margin="50,0,50,0" Style="{DynamicResource backgroundTimePickerStyle}" PropertyChanged="TimePickerGoSleep_PropertyChanged" VerticalOptions="Center" HeightRequest="100"/>
-                <Label x:Name="test" Style="{DynamicResource labelStyle}"/>
+                <Label/>
+                <Grid>
+                    <Grid.ColumnDefinitions >
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                <TimePicker FontSize="20" Grid.Column="1" x:Name="TimePickerGoSleep" Margin="50,0,50,0" 
+                            Style="{DynamicResource backgroundTimePickerStyle}" PropertyChanged="TimePickerGoSleep_PropertyChanged"
+                            VerticalOptions="Center" HeightRequest="50"/>
+                    <Button Font="10" x:Name="saveSetTime" Style="{DynamicResource backgroundButtonStyle}" Clicked="saveSetTime_Clicked" 
+                            Grid.Column="2" Text="Use this Hour Every Time" />
+                </Grid>
+                <Label HorizontalOptions="CenterAndExpand" x:Name="test" Text="Current Start time is not set" Style="{DynamicResource labelStyle}"/>
+                <Button x:Name="PickCurrentTime" Text="Start with curent time" Margin="50,50,50,50" Clicked="PickCurrentTime_Clicked" Style="{DynamicResource backgroundButtonStyle}"/>
+                
             </StackLayout>
         </ScrollView>
 
