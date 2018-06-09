@@ -74,12 +74,21 @@ namespace Sleep_Tight_v1_3.Helpers
             get => AppSettings.GetValueOrDefault(nameof(UseGyro), false);
             set => AppSettings.AddOrUpdateValue(nameof(UseGyro), value);
         }
-        //etermina daca utilizatorul vrea sa ii fie inregistrate miscarile noapte 
+        //determina daca utilizatorul vrea sa ii fie inregistrate miscarile noapte 
         public static string lastTimeSet
         {
             get => AppSettings.GetValueOrDefault(nameof(lastTimeSet), "");
             set => AppSettings.AddOrUpdateValue(nameof(lastTimeSet), value);
         }
+
+
+        //is an alarm set or not
+        public static bool isAlarmSet
+        {
+            get => AppSettings.GetValueOrDefault(nameof(isAlarmSet), false);
+            set => AppSettings.AddOrUpdateValue(nameof(isAlarmSet), value);
+        }
+
         public static void ClearAllData()
         {
             AppSettings.Clear();

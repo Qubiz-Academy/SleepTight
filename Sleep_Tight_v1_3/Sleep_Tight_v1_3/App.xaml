@@ -29,6 +29,11 @@
                 <Setter Property="TextColor" Value="{DynamicResource textButtonColor}"/>
             </Style>
             
+            <Style x:Key="specialButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource backgroundColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource textColor}"/>
+            </Style>
+            
             <Style x:Key="backgroundEntryStyle" TargetType="Entry">
                 <Setter Property="PlaceholderColor" Value="{DynamicResource textColor}"/>
                 <Setter Property="TextColor" Value="{DynamicResource textColor}"/>
@@ -38,6 +43,7 @@
                 <Setter Property="BackgroundColor" Value="{DynamicResource buttonBackColor}" />
                 
             </Style>
+            
             <Style x:Key="backgroundTimePickerStyle" TargetType="TimePicker">
                 <Setter Property="BackgroundColor" Value="{DynamicResource backgroundColor}" />
                 <Setter Property="TextColor" Value="{DynamicResource  textColor}"/>

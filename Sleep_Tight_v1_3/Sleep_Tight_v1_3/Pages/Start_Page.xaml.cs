@@ -17,29 +17,31 @@ namespace Sleep_Tight_v1_3
         {
             
             InitializeComponent();
-            test.Text = "Current Start Time is " + LocalSettings.lastTimeSet.ToString();
-        }
-        
-        private void TimePickerGoSleep_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
-        {
-            
-            
-        }
-        int minutes_slept = 0;
-        
-        private void PickCurrentTime_Clicked(object sender, EventArgs e)
-        {
-            DateTime now = DateTime.Now.ToLocalTime();
-            TimePickerGoSleep.Time = now.TimeOfDay;
-            LocalSettings.lastTimeSet = TimePickerGoSleep.Time.ToString();
-            test.Text = "Current Start Time is " + LocalSettings.lastTimeSet.ToString();
+
+            if (LocalSettings.isAlarmSet == false)
+            {
+                alarmSet.Text = "There is no alarm set yet! " +
+                    "Press above to set one!";
+                CurrentPage = StartAlarm;
+            }
+            else
+            {
+                CurrentPage = StartMain;
+                alarmSet.IsVisible = false;
+            }
         }
 
-        private void saveSetTime_Clicked(object sender, EventArgs e)
+        private void ShowCurrentAlarm_Clicked(object sender, EventArgs e)
         {
-            LocalSettings.lastTimeSet = TimePickerGoSleep.Time.ToString();
-            test.IsVisible = false;
+            CurrentPage = StartAlarm;
         }
+
+        private void TimePickerWake_PropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+        {
+            
+            
+        }
+        
 
         //FUNCTII PENTRU TIPURI DE SOMN
 
@@ -142,6 +144,6 @@ namespace Sleep_Tight_v1_3
               intre 13 si 16*/
         }
 
-
+        
     }
 }
