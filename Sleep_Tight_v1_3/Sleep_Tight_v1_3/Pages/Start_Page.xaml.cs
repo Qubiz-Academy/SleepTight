@@ -40,5 +40,108 @@ namespace Sleep_Tight_v1_3
             LocalSettings.lastTimeSet = TimePickerGoSleep.Time.ToString();
             test.IsVisible = false;
         }
+
+        //FUNCTII PENTRU TIPURI DE SOMN
+
+        private void SegmentedSleep()
+        {
+            TimeSpan StartTime, WakeTime, SleepTime;
+            //wakeup call
+            StartTime = TimePickerGoSleep.Time;
+            SleepTime = new TimeSpan(3, 30, 0);
+            WakeTime = StartTime + SleepTime;
+            
+            //aici il pune la nani iara
+            SleepTime = new TimeSpan(2, 0, 0);
+            WakeTime = WakeTime + SleepTime;
+
+            //second wakeup call
+            SleepTime = new TimeSpan(3, 30, 0);
+            WakeTime = WakeTime + SleepTime;
+
+            //iara il pune la nani pt un ciclu complet
+            SleepTime = new TimeSpan(15, 0, 0);
+            WakeTime = WakeTime + SleepTime;
+        }
+
+        private void SegmentedSleepWithSiesta()
+        {
+            TimeSpan StartTime, WakeTime, SleepTime;
+            //wakeup call
+            StartTime = TimePickerGoSleep.Time;
+            SleepTime = new TimeSpan(3, 30, 0);
+            WakeTime = StartTime + SleepTime;
+
+            //aici il pune la nani iara
+            SleepTime = new TimeSpan(3, 0, 0);
+            WakeTime = WakeTime + SleepTime;
+
+            //second wakeup call
+            SleepTime = new TimeSpan(2, 30, 0);
+            WakeTime = WakeTime + SleepTime;
+
+            //nani pt siesta
+            SleepTime = new TimeSpan(6, 0, 0);
+            WakeTime = WakeTime + SleepTime;
+
+            //wakeup after siesta
+            SleepTime = new TimeSpan(0, 18, 0);
+            WakeTime = WakeTime + SleepTime;
+
+            //il pune la nani pt un ciclu complet
+            SleepTime = new TimeSpan(8, 42, 0);
+            WakeTime = WakeTime + SleepTime;
+        }
+
+        private void LongSiestaSleep()
+        {
+            TimeSpan StartTime, WakeTime, SleepTime;
+            //wakeup call
+            StartTime = TimePickerGoSleep.Time;
+            SleepTime = new TimeSpan(5, 0, 0);
+            WakeTime = StartTime + SleepTime;
+
+            //aici il pune la nani iara
+            SleepTime = new TimeSpan(7, 0, 0);
+            WakeTime = WakeTime + SleepTime;
+
+            //second wakeup call
+            SleepTime = new TimeSpan(1, 30, 0);
+            WakeTime = WakeTime + SleepTime;
+
+            //nani pt ciclu complet
+            SleepTime = new TimeSpan(10, 30, 0);
+            WakeTime = WakeTime + SleepTime;
+        }
+
+        private void ShortSiestaSleep()
+        {
+            TimeSpan StartTime, WakeTime, SleepTime;
+            //wakeup call
+            StartTime = TimePickerGoSleep.Time;
+            SleepTime = new TimeSpan(6, 0, 0);
+            WakeTime = StartTime + SleepTime;
+
+            //aici il pune la nani iara
+            SleepTime = new TimeSpan(7, 0, 0);
+            WakeTime = WakeTime + SleepTime;
+
+            //second wakeup call
+            SleepTime = new TimeSpan(0, 18, 0);
+            WakeTime = WakeTime + SleepTime;
+
+            //nani pt ciclu complet
+            SleepTime = new TimeSpan(10, 42, 0);
+            WakeTime = WakeTime + SleepTime;
+        }
+
+        private void TriphasicSleep()
+        {
+            /*1 sau 2 ore dupa rasarit
+              30 de min, o ora inainte de apus
+              intre 13 si 16*/
+        }
+
+
     }
 }

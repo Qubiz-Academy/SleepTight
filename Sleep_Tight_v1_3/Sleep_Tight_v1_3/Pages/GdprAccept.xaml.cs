@@ -21,21 +21,11 @@ namespace Sleep_Tight_v1_3.Pages
 
         private void Button_Clicked(object sender, EventArgs e)
         {
-            if (LocalSettings.ShowTypePage == true)
-            {
-
-                Navigation.PushModalAsync(new TypeChoose1Time());
-                
-            }
-            else
-            {
-                Navigation.PushModalAsync(new MainPage());
-            }
             LocalSettings.ShowGDPR = false;
-            
-
-            
-
+            if (LocalSettings.ShowTypePage == true)
+                Navigation.PushModalAsync(new TypeChoose1Time());
+            else
+                Navigation.PushModalAsync(new MainPage());
         }
     }
 }
