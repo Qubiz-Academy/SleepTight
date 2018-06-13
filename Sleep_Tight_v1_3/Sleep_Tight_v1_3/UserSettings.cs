@@ -3,6 +3,9 @@ using Plugin.Settings;
 using Plugin.Settings.Abstractions;
 using Plugin.Settings.Abstractions.Extensions;
 using System;
+using System.Collections.Generic;
+using Newtonsoft.Json;
+using Sleep_Tight_v1_3.Models;
 
 namespace Sleep_Tight_v1_3.Helpers
 {
@@ -87,6 +90,12 @@ namespace Sleep_Tight_v1_3.Helpers
         {
             get => AppSettings.GetValueOrDefault(nameof(isAlarmSet), false);
             set => AppSettings.AddOrUpdateValue(nameof(isAlarmSet), value);
+        }
+
+        public static List<Alarm> Alarms
+        {
+            get => JsonConvert.DeserializeObject<List<Alarm>>( AppSettings.GetValueOrDefault(nameof(Alarms), "[]"));
+            set => AppSettings.AddOrUpdateValue(nameof(Alarms), JsonConvert.SerializeObject(value));
         }
 
         public static void ClearAllData()
