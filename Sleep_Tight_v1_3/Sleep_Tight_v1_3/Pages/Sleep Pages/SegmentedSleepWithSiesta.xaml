@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sleep_Tight_v1_3.Pages.Sleep_Pages.SegmentedSleepWithSiesta" NavigationPage.HasNavigationBar="False"  Style="{DynamicResource backgroundTabbedStyle}">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Start" Style="{DynamicResource backgroundStyle}">
+        <StackLayout Margin="5,30,5,5" VerticalOptions="Center">
+            <Button Text="START" Style="{DynamicResource backgroundButtonStyle}" Clicked="Button_Clicked_PickCurrentTime"></Button>
+            <Label x:Name="PickedTime" Style="{DynamicResource labelStyle}"></Label>
+        </StackLayout>
+    </ContentPage>
+  <ContentPage Title="STATS" />
+</TabbedPage>
