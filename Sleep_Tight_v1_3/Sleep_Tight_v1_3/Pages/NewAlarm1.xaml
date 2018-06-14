@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sleep_Tight_v1_3.Pages.NewAlarm1" Style="{DynamicResource backgroundStyle}">
+    
+        <StackLayout>
+
+            <TimePicker Margin="20,0,20,15" x:Name="pickWakeHour" Style="{DynamicResource backgroundTimePickerStyle}" 
+                        />
+            <Entry Margin="20,0,20,15" x:Name="pickWakeName" Placeholder="Alarm Name" Style="{DynamicResource backgroundEntryStyle}"
+                   />
+            <Grid Margin="20,0,20,15">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                <Label Text="Enable/Disable Stats for this alarm." Grid.Column="0" Style="{DynamicResource labelStyle}"
+                       VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
+                <Switch x:Name="StatsOnWake" Grid.Column="1" PropertyChanged="StatsOnWake_PropertyChanged"
+                        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsToggled="False"/>
+            </Grid>
+        </StackLayout>
+    
+</ContentPage>

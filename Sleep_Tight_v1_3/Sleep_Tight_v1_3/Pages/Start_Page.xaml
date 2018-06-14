@@ -2,12 +2,15 @@
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sleep_Tight_v1_3.Start_Page"
-            Title="Sleep Tight v1.3" NavigationPage.HasNavigationBar="False" Style="{DynamicResource backgroundTabbedStyle}" >
+            Title="Sleep Tight v1.3" Style="{DynamicResource backgroundTabbedStyle}" >
   <!--Pages can be added as references or inline-->
     
     <ContentPage x:Name="StartAlarm" Title="Alarms" Style="{DynamicResource backgroundStyle}" >
+        <StackLayout>
+        <Button x:Name="NewAlarm" Style="{DynamicResource backgroundButtonStyle}" Text="New Alarm" Margin="30,0,30,0"  
+                VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="10" Clicked="NewAlarm_Clicked"/>
         <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-
+            
             <ListView x:Name="listAlarmaaaa2" ItemSelected="listAlarmaaaa2_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -28,6 +31,7 @@
             </ListView>
 
         </ScrollView>
+        </StackLayout>
     </ContentPage>
     <ContentPage x:Name="StartMain" Title="Start"  >
         <ScrollView>

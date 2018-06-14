@@ -1,5 +1,6 @@
 ﻿using Sleep_Tight_v1_3.Helpers;
 using Sleep_Tight_v1_3.Models;
+using Sleep_Tight_v1_3.Pages;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,7 +20,7 @@ namespace Sleep_Tight_v1_3
         {
             InitializeComponent();
             //this.listAlarmaaaa2.ItemsSource = LocalSettings.Alarms;
-            this.listAlarmaaaa2.ItemsSource = new Alarm[] { new Alarm {Name = "1" , WakeHour=new TimeSpan (0,0,0,0)} };
+            this.listAlarmaaaa2.ItemsSource = LocalSettings.Alarms;
             
             if (LocalSettings.isAlarmSet == false)
             {
@@ -48,5 +49,11 @@ namespace Sleep_Tight_v1_3
         {
             
         }
+        
+        private  void  NewAlarm_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new NewAlarm1());
+            
+        }
     }
-}
+} 
