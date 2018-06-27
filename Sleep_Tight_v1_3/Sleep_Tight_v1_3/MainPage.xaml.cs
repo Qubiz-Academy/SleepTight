@@ -1,11 +1,8 @@
 ﻿using Sleep_Tight_v1_3.Helpers;
 using Sleep_Tight_v1_3.Pages;
+using Sleep_Tight_v1_3.Pages.Sleep_Pages;
 using Sleep_Tight_v1_3.PropertiesPages;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,26 +15,18 @@ namespace Sleep_Tight_v1_3
 		{
             InitializeComponent();
 
-            if (LocalSettings.ShowGDPR == true)
+            if (LocalSettings.ShowGDPR)
             {
                 Detail = new NavigationPage(new GdprAccept());
             }
-            else
-                if (LocalSettings.ShowTypePage == true)
+            else if (LocalSettings.ShowTypePage)
             {
                 Detail = new NavigationPage(new TypeChoose1Time());
             }
-            else
-            {
-                if (LocalSettings.ShowMainPage == 2)
-                    Detail = new NavigationPage(new Start_Page());
-                else
-                    if (LocalSettings.ShowMainPage==1)
-                        Detail = new NavigationPage(new Custom_Page());
-               
-
-            }
-
+            else if (LocalSettings.ShowMainPage == 2)
+                Detail = new NavigationPage(new Start_Page());
+            else if (LocalSettings.ShowMainPage == 1)
+                Detail = new NavigationPage(new Custom_Page());
             
             IsPresented = false;
         }
@@ -70,6 +59,12 @@ namespace Sleep_Tight_v1_3
         private void Handle_Clicked_About(object sender, EventArgs e)
         {
             Detail.Navigation.PushAsync(new About());
+            IsPresented = false;
+        }
+
+        private void Handle_Clicked_Test(object sender, EventArgs e)
+        {
+            Detail.Navigation.PushAsync(new SegmentedSLeep());
             IsPresented = false;
         }
     }

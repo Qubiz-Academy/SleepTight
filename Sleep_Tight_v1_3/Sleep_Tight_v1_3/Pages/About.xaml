@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sleep_Tight_v1_3.About"
-             Title="About Us" NavigationPage.HasNavigationBar="False" Style="{DynamicResource backgroundStyle}">
+             Title="About Us" Style="{DynamicResource backgroundStyle}">
     <ContentPage.Content>
         <StackLayout>
             <Label Style="{DynamicResource labelStyle}" Text="About Us Page"></Label>
