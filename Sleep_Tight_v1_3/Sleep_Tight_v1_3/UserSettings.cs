@@ -91,11 +91,21 @@ namespace Sleep_Tight_v1_3.Helpers
             get => AppSettings.GetValueOrDefault(nameof(isAlarmSet), false);
             set => AppSettings.AddOrUpdateValue(nameof(isAlarmSet), value);
         }
-
+        public static string SetTime
+        {
+            get => AppSettings.GetValueOrDefault(nameof(isAlarmSet),string.Empty) ;
+            set => AppSettings.AddOrUpdateValue(nameof(isAlarmSet), value);
+        }
         public static List<Alarm> Alarms
         {
             get => JsonConvert.DeserializeObject<List<Alarm>>( AppSettings.GetValueOrDefault(nameof(Alarms), "[]"));
             set => AppSettings.AddOrUpdateValue(nameof(Alarms), JsonConvert.SerializeObject(value));
+        }
+
+        public static int CurrentAlarm
+        {
+            get => AppSettings.GetValueOrDefault(nameof(CurrentAlarm), 0);
+            set => AppSettings.AddOrUpdateValue(nameof(CurrentAlarm), value);
         }
 
         public static void ClearAllData()

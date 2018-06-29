@@ -17,6 +17,8 @@ namespace Sleep_Tight_v1_3.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
+            this.SetTurnScreenOn(true);
+
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);

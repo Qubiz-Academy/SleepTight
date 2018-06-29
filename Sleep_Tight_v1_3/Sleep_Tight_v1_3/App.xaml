@@ -8,7 +8,7 @@
             <Color x:Key="textColor"></Color>
             <Color x:Key="buttonBackColor"></Color>
             <Color x:Key="textButtonColor"></Color>
-            
+            <Color x:Key="buttonCancelCOlor"></Color> 
             
             <Style x:Key="labelStyle" TargetType="Label">
                 <Setter Property="TextColor" Value="{DynamicResource textColor}" />
@@ -48,6 +48,11 @@
                 <Setter Property="BackgroundColor" Value="{DynamicResource backgroundColor}" />
                 <Setter Property="TextColor" Value="{DynamicResource  textColor}"/>
                 
+            </Style>
+            <Style x:Key="notPriorityButtons" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{DynamicResource buttonBackColor}" />
+                <Setter Property="TextColor" Value="{DynamicResource  textButtonColor}"/>
+
             </Style>
         </ResourceDictionary>
     </Application.Resources>

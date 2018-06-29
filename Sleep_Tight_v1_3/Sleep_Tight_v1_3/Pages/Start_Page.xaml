@@ -7,8 +7,8 @@
     
     <ContentPage x:Name="StartAlarm" Title="Alarms" Style="{DynamicResource backgroundStyle}" >
         <StackLayout>
-        <Button x:Name="NewAlarm" Style="{DynamicResource backgroundButtonStyle}" Text="New Alarm" Margin="30,0,30,0"  
-                VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="10" Clicked="NewAlarm_Clicked"/>
+        <Button x:Name="NewAlarm"  Style="{DynamicResource backgroundButtonStyle}" Text="New Alarm" Margin="30,0,30,0"  
+                VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="5" Clicked="NewAlarm_Clicked"/>
         <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
             
             <ListView x:Name="listAlarmaaaa2" ItemSelected="listAlarmaaaa2_ItemSelected">
@@ -21,9 +21,9 @@
                                     <ColumnDefinition />
                                     <ColumnDefinition />
                                 </Grid.ColumnDefinitions>
-                                <Label Text="{Binding Name}" Grid.Column="0"/>
-                                <Label Text="{Binding WakeHourString}" Grid.Column="1"/>
-                                <Button Text="dsacs" Style="{DynamicResource backgroundButtonStyle}" Grid.Column="2" Clicked="Button_Clicked"/>
+                                <Label Text="{Binding Name}" Style="{DynamicResource labelStyle}" Grid.Column="0"/>
+                                    <Label Text="{Binding WakeHourString}" Style="{DynamicResource labelStyle}" Grid.Column="1"/>
+                                <Button Text="Edit" Style="{DynamicResource backgroundButtonStyle}" Grid.Column="2" Clicked="Button_Clicked"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
@@ -42,7 +42,7 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-
+                
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
@@ -50,20 +50,22 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <Button x:Name="ShowCurrentAlarm" Style="{DynamicResource specialButtonStyle}"
-                    HeightRequest="100" WidthRequest="200" Text="00.00" FontSize="60"
+            <Button x:Name="ShowCurrentAlarm"  Style="{DynamicResource specialButtonStyle}"
+                    HeightRequest="100" WidthRequest="200" Text="{Binding WakeHourString}" FontSize="60" Grid.Row="0"
                     HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"  Grid.ColumnSpan="4" Clicked="ShowCurrentAlarm_Clicked"/>
-            <Label Grid.Row="1" x:Name="alarmSet" Margin="10,0,10,15" Style="{DynamicResource labelStyle}" FontSize="15" Text="" 
+            <Label Grid.Row="1" x:Name="alarmSet" Margin="10,0,10,15" Text="{Binding Name}" Style="{DynamicResource labelStyle}" FontSize="15" 
                    Grid.ColumnSpan="4"  HorizontalOptions="Center"/>
 
-            <Button Margin="50,25,50,0" VerticalOptions="CenterAndExpand" 
+                <Button x:Name="Start" Margin="50,25,50,0" VerticalOptions="CenterAndExpand" 
                     HorizontalOptions="CenterAndExpand"  Grid.Row="2" Grid.Column="1" 
                     HeightRequest="60" WidthRequest="275"
-                    Grid.ColumnSpan="2" Style="{DynamicResource backgroundButtonStyle}"
+                    Grid.ColumnSpan="2" Style="{DynamicResource backgroundButtonStyle}" Clicked="Start_Clicked"
                     />
-            
-            
-        </Grid>
+
+
+
+
+            </Grid>
         </ScrollView>
     </ContentPage>
     <ContentPage x:Name="StartStats" Title="Stats" Style="{DynamicResource backgroundStyle}" >

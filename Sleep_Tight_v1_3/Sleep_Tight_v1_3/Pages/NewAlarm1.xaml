@@ -2,23 +2,36 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Sleep_Tight_v1_3.Pages.NewAlarm1" Style="{DynamicResource backgroundStyle}">
-    
-        <StackLayout>
 
-            <TimePicker Margin="20,0,20,15" x:Name="pickWakeHour" Style="{DynamicResource backgroundTimePickerStyle}" 
+    <StackLayout>
+
+        <TimePicker Margin="20,0,20,15" Time="{Binding WakeHour}" x:Name="pickWakeHour" Style="{DynamicResource backgroundTimePickerStyle}" 
                         />
-            <Entry Margin="20,0,20,15" x:Name="pickWakeName" Placeholder="Alarm Name" Style="{DynamicResource backgroundEntryStyle}"
+        <Entry Margin="20,0,20,15" Text="{Binding Name}" x:Name="pickWakeName" Placeholder="Alarm Name" Style="{DynamicResource backgroundEntryStyle}"
                    />
-            <Grid Margin="20,0,20,15">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-                <Label Text="Enable/Disable Stats for this alarm." Grid.Column="0" Style="{DynamicResource labelStyle}"
+        <Grid Margin="20,0,20,15">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackLayout Orientation="Horizontal" Grid.ColumnSpan="2">
+                <Label Text="Enable/Disable Stats for this alarm." Grid.Column="0" Style="{DynamicResource labelStyle}" 
                        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" />
-                <Switch x:Name="StatsOnWake" Grid.Column="1" PropertyChanged="StatsOnWake_PropertyChanged"
-                        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsToggled="False"/>
-            </Grid>
-        </StackLayout>
-    
+                <Switch x:Name="StatsOnWake" Grid.Column="1" 
+                        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" IsToggled="{Binding Stats}"/>
+            </StackLayout>
+            <Button x:Name="setAlarm" Text="Save" Grid.Row="1" 
+                    Grid.Column="1" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  HeightRequest="50"
+                Clicked="setAlarm_Clicked" Style="{DynamicResource backgroundButtonStyle}"/>
+            <Button x:Name="cancelAlarm" Text="Cancel" Grid.Row="1"  Grid.Column="0" 
+                    VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" HeightRequest="50" 
+                Clicked="cancelAlarm_Clicked" Style="{DynamicResource backgroundButtonStyle}"/>
+        </Grid>
+
+    </StackLayout>
+
 </ContentPage>

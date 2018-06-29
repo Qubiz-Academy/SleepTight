@@ -4,8 +4,13 @@ using System.Text;
 
 namespace Sleep_Tight_v1_3.Models
 {
-    public class Alarm 
+    public class Alarm
     {
+        public int Id
+        {
+            get;
+            set;
+        }
         public TimeSpan WakeHour
         {
             get;
@@ -16,6 +21,14 @@ namespace Sleep_Tight_v1_3.Models
             get;
             set;
         }
-        public string WakeHourString { get => WakeHour.ToString(); }
+        public string WakeHourString { get => WakeHour.ToString(@"hh\:mm"); }
+        public bool Stats
+        {
+            get;
+            set;
+        }
+
+
+
     }
 }
