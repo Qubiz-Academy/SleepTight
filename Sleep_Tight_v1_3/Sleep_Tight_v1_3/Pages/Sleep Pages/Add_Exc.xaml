@@ -5,11 +5,38 @@
              Title="Add Exception" Style="{DynamicResource backgroundStyle}">
     <ContentPage.Content>
         <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <TimePicker  HorizontalOptions="CenterAndExpand" x:Name="TimePickerStartExc" Margin="50,50,50,50" 
+                            Style="{DynamicResource backgroundTimePickerStyle}" PropertyChanged="TimePickerStartExc_PropertyChanged"
+                            VerticalOptions="CenterAndExpand"  Scale="4"/>
+                <Label Text=" to " Style="{DynamicResource labelStyle}"/>
+                <TimePicker  HorizontalOptions="CenterAndExpand" x:Name="TimePickerEndExc" Margin="50,50,50,50" 
+                            Style="{DynamicResource backgroundTimePickerStyle}" PropertyChanged="TimePickerStartExc_PropertyChanged"
+                            VerticalOptions="CenterAndExpand"  Scale="4"/>
+                <Button Text="Add" Clicked="Add_Clicked" Style="{DynamicResource backgroundButtonStyle}"/>
+            </StackLayout>
+            <Label Grid.Row="1" Grid.Column="0" Text="Exceptions" Style="{DynamicResource labelStyle}"/>
+                <ListView x:Name="ExcList">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Label Text="{Binding IntervalString}" Grid.Column="0" Style="{DynamicResource labelStyle}"/>
+                                    <Button Text="Edit" Style="{DynamicResource backgroundButtonStyle}" Grid.Column="1"/>
+                                    <Button Text="X" BackgroundColor="DarkRed" Grid.Column="2"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
                     <RowDefinition/>
                     <RowDefinition/>
                 </Grid.RowDefinitions>
@@ -18,13 +45,9 @@
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Row="0" Grid.Column="0" Text="Slider goes here"/>
-                <Button Grid.Row="0" Grid.Column="1" Text="Add"/>
-                <Label Grid.Row="1" Grid.Column="0" Text="Exceptions"/>
-                <ListView Grid.Row="2" Grid.Column="0">
-                    
-                </ListView>
-
+                <Button Text="Recalculate" Grid.Row="0" Grid.Column="0" Clicked="Rec_Clicked" Style="{DynamicResource backgroundButtonStyle}"/>
+                <Label Text="" Grid.Row="0" Grid.Column="1"/>
+                <Label Text="" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
