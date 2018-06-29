@@ -15,6 +15,7 @@
                     <Button Text="Information" Style="{DynamicResource backgroundButtonStyle}" Clicked="Handle_Clicked_Information"></Button>
                     <Button Text="Tips" Style="{DynamicResource backgroundButtonStyle}" Clicked="Handle_Clicked_Tips"></Button>
                     <Button Text="About Us" Style="{DynamicResource backgroundButtonStyle}" Clicked="Handle_Clicked_About"></Button>
+                    <Button Text="Test Page Delete After Finish" Style="{DynamicResource backgroundButtonStyle}" Clicked="Handle_Clicked_Test"></Button>
                 </StackLayout>
             </ContentPage.Content>
         </ContentPage>

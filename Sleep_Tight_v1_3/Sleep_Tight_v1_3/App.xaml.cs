@@ -16,10 +16,10 @@ namespace Sleep_Tight_v1_3
             InitializeComponent();
 
             MainPage = new NavigationPage(new MainPage());
-
-           
-            
         }
+
+        public static TimeSpan StartExc { get; set; }
+        public static TimeSpan EndExc { get; set; }
 
 		protected override void OnStart ()
 		{

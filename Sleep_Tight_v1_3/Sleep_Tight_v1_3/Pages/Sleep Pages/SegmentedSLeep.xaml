@@ -4,10 +4,31 @@
              x:Class="Sleep_Tight_v1_3.Pages.Sleep_Pages.SegmentedSLeep" NavigationPage.HasNavigationBar="False"  Style="{DynamicResource backgroundTabbedStyle}">
   <!--Pages can be added as references or inline-->
     <ContentPage Title="Start" Style="{DynamicResource backgroundStyle}">
-        <StackLayout Margin="5,30,5,5" VerticalOptions="Center">
+        <!--<StackLayout Margin="5,30,5,5" VerticalOptions="Center">
             <Button Text="START" Style="{DynamicResource backgroundButtonStyle}" Clicked="Button_Clicked_PickCurrentTime"></Button>
             <Label x:Name="PickedTime" Style="{DynamicResource labelStyle}"></Label>
-        </StackLayout>
+        </StackLayout>-->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Button Text="START" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"  Style="{DynamicResource backgroundButtonStyle}" Clicked="Button_Clicked_PickCurrentTime"/>
+            <Label Text="Sleeping Intervals" Grid.Row="1" Grid.Column="0" Style="{DynamicResource labelStyle}"/>
+            <Button Text="Add Exceptions" Grid.Row="1" Grid.Column="1" Style="{DynamicResource backgroundButtonStyle}" Clicked="Button_Clicked_Add"/>
+
+            <ScrollView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+                <StackLayout>
+                    <Label x:Name="CoreSleep1" Style="{DynamicResource labelStyle}"/>
+                    <Label x:Name="CoreSleep2" Style="{DynamicResource labelStyle}"/>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
     </ContentPage>
     <ContentPage Title="Stats" />
 </TabbedPage>
